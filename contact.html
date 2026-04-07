@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Wells Tech Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <div class="navbar">
+        <div class="logo">
+          <img src="./images/logo.png" width="120px" alt="Wells Tech Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li>
+              <a href="cart.html" class="cart-link">
+                🛒
+                <span class="cart-count" style="display: none;"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Page Header -->
+      <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Get in touch with our team.</p>
+      </div>
+
+      <div class="contact-content">
+        <!-- Contact Info -->
+        <section class="contact-info">
+          <h2>Get In Touch</h2>
+          <div class="info-cards">
+            <div class="info-card glass-card">
+              <div class="info-icon">📧</div>
+              <h3>Email Support</h3>
+              <p><strong>support@wellstech.com</strong></p>
+              <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.9rem;">We respond within 24 hours</p>
+            </div>
+            <div class="info-card glass-card">
+              <div class="info-icon">📱</div>
+              <h3>Phone Support</h3>
+              <p><strong>+1 (800) WELLS-TECH</strong></p>
+              <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.9rem;">Mon-Fri, 9 AM - 6 PM EST</p>
+            </div>
+            <div class="info-card glass-card">
+              <div class="info-icon">📍</div>
+              <h3>Visit Us</h3>
+              <p><strong>Wells Tech Store</strong></p>
+              <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.9rem;">123 Tech Avenue, San Francisco, CA 94102</p>
+            </div>
+            <div class="info-card glass-card">
+              <div class="info-icon">🕐</div>
+              <h3>Business Hours</h3>
+              <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.9rem;">Monday - Friday: 9 AM - 6 PM<br>Saturday: 10 AM - 4 PM<br>Sunday: Closed</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section">
+          <div class="form-header">
+            <h2>Get in Touch</h2>
+            <p>We're here to help. Send us a message and we'll respond as soon as possible.</p>
+          </div>
+          <form id="contactForm" class="contact-form glass-card">
+            <!-- Name and Email Row -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+              </div>
+            </div>
+
+            <!-- Phone and Subject Row -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject <span class="required">*</span></label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select a subject</option>
+                  <option value="order">Order Inquiry</option>
+                  <option value="support">Technical Support</option>
+                  <option value="repair">Repair Services</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group full-width">
+              <label for="message">Message <span class="required">*</span></label>
+              <textarea id="message" name="message" placeholder="Tell us how we can help..." rows="6" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-actions">
+              <button type="submit" class="btn btn-submit">Send Message</button>
+              <p class="form-note">We typically respond within 24 hours on business days.</p>
+            </div>
+          </form>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-container">
+            <div class="faq-item glass-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h4>How long does shipping take?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-content" style="display: none;">
+                <p>Standard shipping takes 5-7 business days. Express shipping is available for 2-3 business days delivery, and overnight shipping is available in select areas.</p>
+              </div>
+            </div>
+
+            <div class="faq-item glass-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h4>What's your return policy?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-content" style="display: none;">
+                <p>We offer a 30-day return policy for all unopened products. If you're not satisfied with your purchase, simply contact us within 30 days for a full refund.</p>
+              </div>
+            </div>
+
+            <div class="faq-item glass-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h4>Do you offer warranty on products?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-content" style="display: none;">
+                <p>Yes! All our products come with manufacturer's warranty. We also offer extended warranty options that you can add during checkout.</p>
+              </div>
+            </div>
+
+            <div class="faq-item glass-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h4>Do you offer repair services?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-content" style="display: none;">
+                <p>Yes, we provide professional repair services for iPhones. Contact our support team to schedule a repair appointment at our service center.</p>
+              </div>
+            </div>
+
+            <div class="faq-item glass-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h4>Can I track my order?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-content" style="display: none;">
+                <p>Absolutely! You'll receive a tracking number via email once your order ships. You can use it to track your package in real-time.</p>
+              </div>
+            </div>
+
+            <div class="faq-item glass-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h4>Do you price match?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-content" style="display: none;">
+                <p>Yes, we offer competitive pricing. If you find a lower price elsewhere for the same product, contact us and we'll match it plus offer an additional 5% discount.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>About Wells Tech</h3>
+          <p>Your premier destination for premium iPhones and innovative technology solutions.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul style="list-style: none;">
+            <li><a href="about.html" style="color: var(--text-muted); text-decoration: none;">About Us</a></li>
+            <li><a href="products.html" style="color: var(--text-muted); text-decoration: none;">Products</a></li>
+            <li><a href="contact.html" style="color: var(--text-muted); text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <p style="color: var(--text-muted); margin-bottom: 10px;">📧 support@wellstech.com</p>
+          <p style="color: var(--text-muted);">📱 +1 (800) WELLS-TECH</p>
+        </div>
+      </div>
+      <div style="border-top: 1px solid var(--card-border); padding-top: 30px; text-align: center; color: var(--text-muted);">
+        <p>&copy; 2026 Wells Tech Store. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+      // Contact form handling
+      document.getElementById('contactForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        showNotification('Message sent! We\'ll get back to you soon. 📧');
+        document.getElementById('contactForm').reset();
+      });
+
+      // FAQ toggle
+      function toggleFAQ(header) {
+        const content = header.nextElementSibling;
+        const toggle = header.querySelector('.faq-toggle');
+        
+        if (content.style.display === 'none') {
+          content.style.display = 'block';
+          toggle.textContent = '−';
+        } else {
+          content.style.display = 'none';
+          toggle.textContent = '+';
+        }
+      }
+    </script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971556516551?text=Hi%20Mr%20Wells!%20I%20have%20a%20question%20about%20your%20products" class="whatsapp-float" title="Chat with us on WhatsApp">
+      <svg style="width: 24px; height: 24px; fill: white;" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.955 1.312l-.355.214-.368-.067c-1.396-.233-2.734-.235-4.026-.07-.846.108-1.657.231-2.43.36-.389.063-.661.464-.661.9v.906c0 .566.29 1.07.736 1.412.59.448 1.355.622 2.091.753.329.052.648.107.953.157.303.048.586.135.873.237l.744.272c.613.265 1.156.744 1.584 1.418.823 1.305 2.007 2.542 3.287 3.315.656.408 1.534.645 2.503.645.968 0 1.846-.237 2.502-.645 1.28-.773 2.464-2.01 3.287-3.315.428-.674.971-1.153 1.584-1.418l.744-.272c.287-.102.57-.189.873-.237.305-.05.624-.105.953-.157.736-.131 1.501-.305 2.091-.753.446-.342.736-.846.736-1.412v-.906c0-.436-.272-.837-.661-.9-.773-.129-1.584-.252-2.43-.36-1.292-.165-2.63-.163-4.026.07l-.368.067-.355-.214a9.87 9.87 0 00-4.955-1.312z"/></svg>
+    </a>
+  </body>
+</html>

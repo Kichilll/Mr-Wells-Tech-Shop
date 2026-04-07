@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account - Wells Tech Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <div class="navbar">
+        <div class="logo">
+          <img src="./images/logo.png" width="120px" alt="Wells Tech Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li>
+              <a href="cart.html" class="cart-link">
+                🛒
+                <span class="cart-count" style="display: none;"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Page Header -->
+      <div class="account-header">
+        <h1>My Account</h1>
+        <p>Manage your account and preferences</p>
+      </div>
+
+      <div class="account-content">
+        <!-- Sidebar -->
+        <aside class="account-sidebar">
+          <div class="sidebar-menu">
+            <button class="menu-item active" onclick="switchTab('dashboard')">📊 Dashboard</button>
+            <button class="menu-item" onclick="switchTab('profile')">👤 Profile</button>
+            <button class="menu-item" onclick="switchTab('orders')">📦 Orders</button>
+            <button class="menu-item" onclick="switchTab('addresses')">📍 Addresses</button>
+            <button class="menu-item" onclick="switchTab('wishlist')">❤️ Wishlist</button>
+            <button class="menu-item" onclick="switchTab('settings')">⚙️ Settings</button>
+            <button class="menu-item logout" onclick="logout()">🚪 Logout</button>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="account-main">
+          <!-- Dashboard Tab -->
+          <div id="dashboard" class="tab-content active">
+            <h2>Welcome Back!</h2>
+            <div class="dashboard-grid">
+              <div class="dashboard-card glass-card">
+                <div class="card-icon">📦</div>
+                <div class="card-info">
+                  <h3>5</h3>
+                  <p>Total Orders</p>
+                </div>
+              </div>
+              <div class="dashboard-card glass-card">
+                <div class="card-icon">💰</div>
+                <div class="card-info">
+                  <h3>$2,450</h3>
+                  <p>Total Spent</p>
+                </div>
+              </div>
+              <div class="dashboard-card glass-card">
+                <div class="card-icon">⭐</div>
+                <div class="card-info">
+                  <h3>Gold</h3>
+                  <p>Member Status</p>
+                </div>
+              </div>
+              <div class="dashboard-card glass-card">
+                <div class="card-icon">🎁</div>
+                <div class="card-info">
+                  <h3>450</h3>
+                  <p>Reward Points</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="recent-activity" style="margin-top: 40px;">
+              <h3>Recent Activity</h3>
+              <div class="activity-list">
+                <div class="activity-item">
+                  <span class="activity-date">Today</span>
+                  <span class="activity-text">Started tracking order #WTS-2648</span>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-date">Yesterday</span>
+                  <span class="activity-text">Added iPhone 17 Pro Max to Wishlist</span>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-date">March 28</span>
+                  <span class="activity-text">Received order #WTS-2647</span>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-date">March 25</span>
+                  <span class="activity-text">Earned 50 reward points</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Tab -->
+          <div id="profile" class="tab-content">
+            <h2>Profile Information</h2>
+            <form class="profile-form glass-card">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" value="John" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" value="Doe" required>
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" value="john.doe@example.com" required>
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" value="+1 (555) 123-4567" required>
+              </div>
+              <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date" value="1990-01-15" required>
+              </div>
+              <div class="form-group">
+                <label>Gender</label>
+                <select>
+                  <option>Not specified</option>
+                  <option selected>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <button type="submit" class="btn">Save Changes</button>
+            </form>
+          </div>
+
+          <!-- Orders Tab -->
+          <div id="orders" class="tab-content">
+            <h2>Order History</h2>
+            <div class="orders-list">
+              <div class="order-item glass-card">
+                <div class="order-header">
+                  <div>
+                    <h4>Order #WTS-2648</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">March 29, 2026</p>
+                  </div>
+                  <span class="order-status status-shipped">🚚 Shipped</span>
+                </div>
+                <div class="order-details">
+                  <p><strong>iPhone 16 Pro Max</strong> - 256GB Space Gray</p>
+                  <p style="color: var(--text-muted); font-size: 0.9rem;">Qty: 1 | Total: $1,199.99</p>
+                </div>
+                <button class="btn-secondary" style="margin-top: 10px;">Track Order</button>
+              </div>
+
+              <div class="order-item glass-card">
+                <div class="order-header">
+                  <div>
+                    <h4>Order #WTS-2647</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">March 20, 2026</p>
+                  </div>
+                  <span class="order-status status-delivered">✅ Delivered</span>
+                </div>
+                <div class="order-details">
+                  <p><strong>iPhone 16 Plus</strong> - 128GB Blue</p>
+                  <p style="color: var(--text-muted); font-size: 0.9rem;">Qty: 1 | Total: $899.99</p>
+                </div>
+                <button class="btn-secondary" style="margin-top: 10px;">View Details</button>
+              </div>
+
+              <div class="order-item glass-card">
+                <div class="order-header">
+                  <div>
+                    <h4>Order #WTS-2646</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">March 10, 2026</p>
+                  </div>
+                  <span class="order-status status-delivered">✅ Delivered</span>
+                </div>
+                <div class="order-details">
+                  <p><strong>iPhone 15 Series</strong> - 256GB Purple</p>
+                  <p style="color: var(--text-muted); font-size: 0.9rem;">Qty: 1 | Total: $799.99</p>
+                </div>
+                <button class="btn-secondary" style="margin-top: 10px;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Addresses Tab -->
+          <div id="addresses" class="tab-content">
+            <h2>Saved Addresses</h2>
+            <div class="addresses-list">
+              <div class="address-card glass-card">
+                <div class="address-header">
+                  <h4>Home Address</h4>
+                  <span class="badge-primary">Default</span>
+                </div>
+                <p>123 Main Street<br>Springfield, IL 62701<br>USA</p>
+                <div class="address-actions">
+                  <button class="btn-secondary">Edit</button>
+                  <button class="btn-secondary">Delete</button>
+                </div>
+              </div>
+
+              <div class="address-card glass-card">
+                <div class="address-header">
+                  <h4>Office Address</h4>
+                </div>
+                <p>456 Business Avenue<br>Chicago, IL 60611<br>USA</p>
+                <div class="address-actions">
+                  <button class="btn-secondary">Edit</button>
+                  <button class="btn-secondary">Delete</button>
+                </div>
+              </div>
+
+              <button class="btn" style="margin-top: 20px;">+ Add New Address</button>
+            </div>
+          </div>
+
+          <!-- Wishlist Tab -->
+          <div id="wishlist" class="tab-content">
+            <h2>My Wishlist</h2>
+            <div class="wishlist-grid">
+              <div class="wish-item glass-card">
+                <div class="wish-image">📱</div>
+                <h4>iPhone 17 Pro Max</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">256GB | Deep Blue</p>
+                <p style="color: #0ea5e9; font-weight: 600; margin: 10px 0;">$1,299.99</p>
+                <button class="btn" style="width: 100%; margin-bottom: 8px;">Add to Cart</button>
+                <button class="btn-secondary" style="width: 100%;">Remove</button>
+              </div>
+
+              <div class="wish-item glass-card">
+                <div class="wish-image">📱</div>
+                <h4>iPhone 16 Pro</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">512GB | Titanium</p>
+                <p style="color: #0ea5e9; font-weight: 600; margin: 10px 0;">$999.99</p>
+                <button class="btn" style="width: 100%; margin-bottom: 8px;">Add to Cart</button>
+                <button class="btn-secondary" style="width: 100%;">Remove</button>
+              </div>
+
+              <div class="wish-item glass-card">
+                <div class="wish-image">📱</div>
+                <h4>iPhone 15</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">128GB | Pink</p>
+                <p style="color: #0ea5e9; font-weight: 600; margin: 10px 0;">$699.99</p>
+                <button class="btn" style="width: 100%; margin-bottom: 8px;">Add to Cart</button>
+                <button class="btn-secondary" style="width: 100%;">Remove</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Settings Tab -->
+          <div id="settings" class="tab-content">
+            <h2>Account Settings</h2>
+            
+            <div class="settings-section glass-card" style="margin-bottom: 20px;">
+              <h3>Notifications</h3>
+              <div class="setting-item">
+                <label>
+                  <input type="checkbox" checked> Email notifications for orders
+                </label>
+              </div>
+              <div class="setting-item">
+                <label>
+                  <input type="checkbox" checked> Marketing emails
+                </label>
+              </div>
+              <div class="setting-item">
+                <label>
+                  <input type="checkbox"> SMS notifications
+                </label>
+              </div>
+            </div>
+
+            <div class="settings-section glass-card" style="margin-bottom: 20px;">
+              <h3>Security</h3>
+              <button class="btn-secondary" style="margin-bottom: 10px;">Change Password</button>
+              <button class="btn-secondary" style="margin-bottom: 10px;">Two-Factor Authentication</button>
+              <button class="btn-secondary">View Login Activity</button>
+            </div>
+
+            <div class="settings-section glass-card" style="margin-bottom: 20px;">
+              <h3>Privacy</h3>
+              <div class="setting-item">
+                <label>
+                  <input type="checkbox" checked> Show profile to other users
+                </label>
+              </div>
+              <div class="setting-item">
+                <label>
+                  <input type="checkbox"> Allow personalized recommendations
+                </label>
+              </div>
+            </div>
+
+            <button class="btn">Save Settings</button>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>About Wells Tech</h3>
+          <p>Your premier destination for premium iPhones and innovative technology solutions.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul style="list-style: none;">
+            <li><a href="about.html" style="color: var(--text-muted); text-decoration: none;">About Us</a></li>
+            <li><a href="products.html" style="color: var(--text-muted); text-decoration: none;">Products</a></li>
+            <li><a href="contact.html" style="color: var(--text-muted); text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <p style="color: var(--text-muted); margin-bottom: 10px;">📧 support@wellstech.com</p>
+          <p style="color: var(--text-muted);">📱 +1 (800) WELLS-TECH</p>
+        </div>
+      </div>
+      <div style="border-top: 1px solid var(--card-border); padding-top: 30px; text-align: center; color: var(--text-muted);">
+        <p>&copy; 2026 Wells Tech Store. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+      function switchTab(tabName) {
+        // Hide all tabs
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        // Remove active class from all menu items
+        const menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach(item => item.classList.remove('active'));
+
+        // Show selected tab
+        document.getElementById(tabName).classList.add('active');
+
+        // Add active class to clicked menu item
+        event.target.classList.add('active');
+      }
+
+      function logout() {
+        if (confirm('Are you sure you want to logout?')) {
+          showNotification('Logged out successfully!');
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 1000);
+        }
+      }
+
+      // Form submissions
+      document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          showNotification('Changes saved successfully!');
+        });
+      });
+    </script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971556516551?text=Hi%20Mr%20Wells!%20I%20have%20a%20question%20about%20your%20products" class="whatsapp-float" title="Chat with us on WhatsApp">
+      <svg style="width: 24px; height: 24px; fill: white;" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.955 1.312l-.355.214-.368-.067c-1.396-.233-2.734-.235-4.026-.07-.846.108-1.657.231-2.43.36-.389.063-.661.464-.661.9v.906c0 .566.29 1.07.736 1.412.59.448 1.355.622 2.091.753.329.052.648.107.953.157.303.048.586.135.873.237l.744.272c.613.265 1.156.744 1.584 1.418.823 1.305 2.007 2.542 3.287 3.315.656.408 1.534.645 2.503.645.968 0 1.846-.237 2.502-.645 1.28-.773 2.464-2.01 3.287-3.315.428-.674.971-1.153 1.584-1.418l.744-.272c.287-.102.57-.189.873-.237.305-.05.624-.105.953-.157.736-.131 1.501-.305 2.091-.753.446-.342.736-.846.736-1.412v-.906c0-.436-.272-.837-.661-.9-.773-.129-1.584-.252-2.43-.36-1.292-.165-2.63-.163-4.026.07l-.368.067-.355-.214a9.87 9.87 0 00-4.955-1.312z"/></svg>
+    </a>
+  </body>
+</html>
