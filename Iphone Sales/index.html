@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wells Tech Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="./images/logo.png" width="120px" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Account</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="row hero">
+        <div class="col-2">
+            <h1>Give Your iPhone<br> <span class="gradient-text">A New Style!</span></h1>
+            <p>Experience the perfect blend of innovation and elegance. 
+            Upgrade to the most powerful devices built for greatness.</p>
+            <a href="#series" class="btn">Explore The Series</a>
+        </div>
+        <div class="col-2 hero-img-container">
+           <div class="glow-orb"></div>
+           <img src="./images/Apple_iPhone_17_Pro_Max_512GB_-_Deep_Blue-removebg-preview.png" alt="iPhone 16 Pro Max" class="hero-device">
+        </div>
+      </div>
+
+      <!-- Carousel Section -->
+      <div id="series" class="carousel-section">
+        <div class="section-header">
+            <h2>Discover The Series</h2>
+            <p>From the latest innovation to classic powerhouses.</p>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-btn prev">&#10094;</button>
+            <div class="carousel-track">
+                <!-- Carousel Item 1 -->
+                <div class="large-carousel-item glass-card">
+                    <img src="./images/Apple_iPhone_17_Pro_Max_512GB_-_Deep_Blue-removebg-preview.png" alt="iPhone 17 Pro Max">
+                    <div class="large-item-info">
+                        <h3>iPhone 17 Pro Max</h3>
+                        <p class="desc">The absolute peak of smartphone innovation, designed for pro users and heavy workloads.</p>
+                        <ul class="specs-list">
+                            <li><span>Storage:</span> 256GB / 512GB / 1TB</li>
+                            <li><span>Battery Life:</span> Up to 29 hours</li>
+                            <li><span>Best Use:</span> Professional Photography, 3D Gaming, Power Users</li>
+                        </ul>
+                        <a href="products.html" class="buy-btn">Explore More</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 2 -->
+                <div class="large-carousel-item glass-card">
+                    <img src="./images/header_iphone_16_pro_max_rose_titanium_large.png" alt="iPhone 16 Pro Max">
+                    <div class="large-item-info">
+                        <h3>iPhone 16 Pro Max</h3>
+                        <p class="desc">Forged in titanium. Incredibly strong and incredibly light. The ultimate device for creators.</p>
+                        <ul class="specs-list">
+                            <li><span>Storage:</span> 128GB / 256GB / 512GB</li>
+                            <li><span>Battery Life:</span> Up to 27 hours</li>
+                            <li><span>Best Use:</span> Content Creation, Videography, Daily Excellence</li>
+                        </ul>
+                        <a href="products.html" class="buy-btn">Explore More</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 3 -->
+                <div class="large-carousel-item glass-card">
+                    <img src="./images/header_iphone_16_plus_blue_large.png" alt="iPhone 16 Plus">
+                    <div class="large-item-info">
+                        <h3>iPhone 16 Plus</h3>
+                        <p class="desc">More size. More fun. An expansive display coupled with incredibly long battery life.</p>
+                        <ul class="specs-list">
+                            <li><span>Storage:</span> 128GB / 256GB / 512GB</li>
+                            <li><span>Battery Life:</span> Up to 26 hours</li>
+                            <li><span>Best Use:</span> Streaming Movies, Social Media, Productivity</li>
+                        </ul>
+                        <a href="products.html" class="buy-btn">Explore More</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 4 -->
+                <div class="large-carousel-item glass-card">
+                    <img src="./images/iPhone-15-Sreries-removebg-preview.png" alt="iPhone 15 Series">
+                    <div class="large-item-info">
+                        <h3>iPhone 15 Series</h3>
+                        <p class="desc">A huge leap forward. Featuring the Dynamic Island and an all-new 48MP Main camera.</p>
+                        <ul class="specs-list">
+                            <li><span>Storage:</span> 128GB / 256GB / 512GB</li>
+                            <li><span>Battery Life:</span> Up to 20 hours</li>
+                            <li><span>Best Use:</span> Essential Connectivity, Everyday Snaps, Great Value</li>
+                        </ul>
+                        <a href="products.html" class="buy-btn">Explore More</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 5 (Video) -->
+                <div class="large-carousel-item glass-card">
+                    <video src="./images/iPhone Air.mp4" autoplay loop muted playsinline></video>
+                    <div class="large-item-info">
+                        <h3>Introducing iPhone Air</h3>
+                        <p class="desc">An exclusive concept preview. Astonishingly thin. Unbelievably capable.</p>
+                        <ul class="specs-list">
+                            <li><span>Coming Soon:</span> Be the first to know</li>
+                            <li><span>Design:</span> Ultra-thin aerodynamic profile</li>
+                            <li><span>Best Use:</span> Future enthusiasts, Portability</li>
+                        </ul>
+                        <a href="products.html" class="buy-btn">Stay Updated</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 6 (Video) -->
+                <div class="large-carousel-item glass-card">
+                    <video src="./images/iPhone 17 Pro and iPhone 17 Pro Max.mp4" autoplay loop muted playsinline></video>
+                    <div class="large-item-info">
+                        <h3>iPhone 17 Pro Series</h3>
+                        <p class="desc">Watch the ultimate evolution of the pro line in action. Designed differently.</p>
+                        <ul class="specs-list">
+                            <li><span>Video Demo:</span> See it in motion</li>
+                            <li><span>Performance:</span> Next-gen A-Series chip</li>
+                            <li><span>Best Use:</span> Pro Cinematography</li>
+                        </ul>
+                        <a href="products.html" class="buy-btn">Explore More</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next">&#10095;</button>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="features-section">
+        <div class="feature-box glass-card">
+            <div class="feature-icon">🚚</div>
+            <h3>Free & Fast Delivery</h3>
+            <p>Get your new iPhone delivered to your doorstep within 24 hours.</p>
+        </div>
+        <div class="feature-box glass-card">
+            <div class="feature-icon">🛡️</div>
+            <h3>1-Year Warranty</h3>
+            <p>Every device includes an Apple-certified warranty for peace of mind.</p>
+        </div>
+        <div class="feature-box glass-card">
+            <div class="feature-icon">🔁</div>
+            <h3>Hassle-Free Returns</h3>
+            <p>Not satisfied? Return it within 14 days for a full refund.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>Wells Tech Store</h3>
+                <p>Delivering the ultimate Apple experience straight to you.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Warranty Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Wells Tech Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+      const track = document.querySelector('.carousel-track');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+
+      const scrollAmount = 1000;
+
+      const scrollNext = () => {
+          if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
+              track.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+              track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+          }
+      };
+
+      nextBtn.addEventListener('click', scrollNext);
+
+      prevBtn.addEventListener('click', () => {
+          if (track.scrollLeft <= 0) {
+              track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+          } else {
+              track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+          }
+      });
+
+      let autoScroll = setInterval(scrollNext, 2000);
+
+      track.addEventListener('mouseenter', () => clearInterval(autoScroll));
+      track.addEventListener('mouseleave', () => {
+          autoScroll = setInterval(scrollNext, 2000);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Wells Tech Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="./images/logo0.png" width="120px" alt="Wells Tech Logo"/>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Account</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <!-- Products Header Section -->
+      <div class="products-header">
+          <div class="title-wrap">
+              <h2>All iPhones</h2>
+              <p>Explore our full range of premium devices.</p>
+          </div>
+          <div class="search-container">
+              <input type="text" id="productSearch" class="product-search" placeholder="Search iPhones...">
+          </div>
+      </div>
+
+      <div id="noResultsMessage" class="no-results" style="display: none;">
+          <h3>Product Out of Stock</h3>
+          <p>We couldn't find any iPhones matching your search right now.</p>
+      </div>
+
+      <!-- Carousel Section -->
+      <div id="series" class="carousel-section">
+        <div class="section-header">
+            <h2>Discover The Series</h2>
+            <p>From the latest innovation to classic powerhouses.</p>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-btn prev">&#10094;</button>
+            <div class="carousel-track">
+                <!-- Carousel Item 1 -->
+                <div class="large-carousel-item glass-card">
+                    <img src="./images/Apple_iPhone_17_Pro_Max_512GB_-_Deep_Blue-removebg-preview.png" alt="iPhone 17 Pro Max">
+                    <div class="large-item-info">
+                        <h3>iPhone 17 Pro Max</h3>
+                        <p class="desc">The absolute peak of smartphone innovation, designed for pro users and heavy workloads.</p>
+                        <ul class="specs-list">
+                            <li><span>Storage:</span> 256GB / 512GB / 1TB</li>
+                            <li><span>Battery Life:</span> Up to 29 hours</li>
+                            <li><span>Best Use:</span> Professional Photography, 3D Gaming, Power Users</li>
+                        </ul>
+                        <a href="products.html" class="buy-btn">Explore More</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 2 -->
+                <div class="large-carousel-item glass-card">
+                    <img src="./images/header_iphone_16_pro_max_rose_titanium_large.png" alt="iPhone 16 Pro Max">
+                    <div class="large-item-info">
+                        <h3>iPhone 16 Pro Max</h3>
+                        <p class="desc">Forged in titanium. Incredibly strong and incredibly light. The ultimate device for creators.</p>
+                        <ul class="specs-list">
+                            <li><span>Storage:</span> 128GB / 256GB / 512GB</li>
+                            <li><span>Battery Life:</span> Up to 27 hours</li>
+                            <li><span>Best Use:</span> Content Creation, Videography, Daily Excellence</li>
+                        </ul>
+                        <a href="products.html" class="buy-btn">Explore More</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 3 -->
+                <div class="large-carousel-item glass-card">
+                    <img src="./images/header_iphone_16_plus_blue_large.png" alt="iPhone 16 Plus">
+                    <div class="large-item-info">
+                        <h3>iPhone 16 Plus</h3>
+                        <p class="desc">More size. More fun. An expansive display coupled with incredibly long battery life.</p>
+                        <ul class="specs-list">
+                            <li><span>Storage:</span> 128GB / 256GB / 512GB</li>
+                            <li><span>Battery Life:</span> Up to 26 hours</li>
+                            <li><span>Best Use:</span> Streaming Movies, Social Media, Productivity</li>
+                        </ul>
+                        <a href="products.html" class="buy-btn">Explore More</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 4 -->
+                <div class="large-carousel-item glass-card">
+                    <img src="./images/iPhone-15-Sreries-removebg-preview.png" alt="iPhone 15 Series">
+                    <div class="large-item-info">
+                        <h3>iPhone 15 Series</h3>
+                        <p class="desc">A huge leap forward. Featuring the Dynamic Island and an all-new 48MP Main camera.</p>
+                        <ul class="specs-list">
+                            <li><span>Storage:</span> 128GB / 256GB / 512GB</li>
+                            <li><span>Battery Life:</span> Up to 20 hours</li>
+                            <li><span>Best Use:</span> Essential Connectivity, Everyday Snaps, Great Value</li>
+                        </ul>
+                        <a href="products.html" class="buy-btn">Explore More</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 5 (Video) -->
+                <div class="large-carousel-item glass-card">
+                    <video src="./images/iPhone Air.mp4" autoplay loop muted playsinline></video>
+                    <div class="large-item-info">
+                        <h3>Introducing iPhone Air</h3>
+                        <p class="desc">An exclusive concept preview. Astonishingly thin. Unbelievably capable.</p>
+                        <ul class="specs-list">
+                            <li><span>Coming Soon:</span> Be the first to know</li>
+                            <li><span>Design:</span> Ultra-thin aerodynamic profile</li>
+                            <li><span>Best Use:</span> Future enthusiasts, Portability</li>
+                        </ul>
+                        <a href="products.html" class="buy-btn">Stay Updated</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 6 (Video) -->
+                <div class="large-carousel-item glass-card">
+                    <video src="./images/iPhone 17 Pro and iPhone 17 Pro Max.mp4" autoplay loop muted playsinline></video>
+                    <div class="large-item-info">
+                        <h3>iPhone 17 Pro Series</h3>
+                        <p class="desc">Watch the ultimate evolution of the pro line in action. Designed differently.</p>
+                        <ul class="specs-list">
+                            <li><span>Video Demo:</span> See it in motion</li>
+                            <li><span>Performance:</span> Next-gen A-Series chip</li>
+                            <li><span>Best Use:</span> Pro Cinematography</li>
+                        </ul>
+                        <a href="products.html" class="buy-btn">Explore More</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next">&#10095;</button>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="series-category">
+          <h3 class="category-title">iPhone 17 Series</h3>
+          <div class="products-grid">
+              <div class="product-card glass-card">
+                  <img src="./images/Apple_iPhone_17_Pro_Max_512GB_-_Deep_Blue-removebg-preview.png" alt="iPhone 17 Pro Max">
+                  <div class="product-info">
+                      <h4>iPhone 17 Pro Max</h4>
+                      <p class="price">$1,199</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+              <div class="product-card glass-card">
+                  <img src="./images/iPhone_17_Pro_Max_Cosmic_Orange.jpg" alt="iPhone 17 Pro Max Orange">
+                  <div class="product-info">
+                      <h4>iPhone 17 Pro Max (Orange)</h4>
+                      <p class="price">$1,199</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+              <div class="product-card glass-card">
+                  <img src="./images/iPhone_17_Pro_Silver.jpg" alt="iPhone 17 Pro Silver">
+                  <div class="product-info">
+                      <h4>iPhone 17 Pro</h4>
+                      <p class="price">$1,099</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+              <div class="product-card glass-card">
+                  <img src="./images/iPhone_17_Air_Blue_500.jpg" alt="iPhone 17 Air Blue">
+                  <div class="product-info">
+                      <h4>iPhone 17 Air</h4>
+                      <p class="price">$899</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="series-category">
+          <h3 class="category-title">iPhone 16 Series</h3>
+          <div class="products-grid">
+              <div class="product-card glass-card">
+                  <img src="./images/header_iphone_16_pro_max_rose_titanium_large.png" alt="iPhone 16 Pro Max">
+                  <div class="product-info">
+                      <h4>iPhone 16 Pro Max</h4>
+                      <p class="price">$999</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+              <div class="product-card glass-card">
+                  <img src="./images/header_iphone_16_pro_rose_titanium_large.png" alt="iPhone 16 Pro Rose">
+                  <div class="product-info">
+                      <h4>iPhone 16 Pro</h4>
+                      <p class="price">$999</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+              <div class="product-card glass-card">
+                  <img src="./images/header_iphone_16_plus_blue_large.png" alt="iPhone 16 Plus">
+                  <div class="product-info">
+                      <h4>iPhone 16 Plus</h4>
+                      <p class="price">$899</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="series-category">
+          <h3 class="category-title">iPhone 15 Series</h3>
+          <div class="products-grid">
+              <div class="product-card glass-card">
+                  <img src="./images/iPhone-15-Sreries-removebg-preview.png" alt="iPhone 15">
+                  <div class="product-info">
+                      <h4>iPhone 15 Series</h4>
+                      <p class="price">$799</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+              <div class="product-card glass-card">
+                  <img src="./images/Smartphone Apple iPhone 15 128GB bleu.jpg" alt="iPhone 15 Blue">
+                  <div class="product-info">
+                      <h4>iPhone 15 (Blue)</h4>
+                      <p class="price">$799</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="series-category">
+          <h3 class="category-title">iPhone 14 Series</h3>
+          <div class="products-grid">
+              <div class="product-card glass-card">
+                  <img src="./images/Apple_iPhone_14_series__Watch_Series_8_now_available_in_India-removebg-preview.png" alt="iPhone 14 Series">
+                  <div class="product-info">
+                      <h4>iPhone 14 Series</h4>
+                      <p class="price">$699</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="series-category">
+          <h3 class="category-title">Classic Models</h3>
+          <div class="products-grid">
+              <div class="product-card glass-card">
+                  <img src="./images/Iphone 13 Pro Max.jpg" alt="iPhone 13 Pro Max">
+                  <div class="product-info">
+                      <h4>iPhone 13 Pro Max</h4>
+                      <p class="price">$599</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+              <div class="product-card glass-card">
+                  <img src="./images/iPhone 13 Pro Max Blue Azul.jpg" alt="iPhone 13 Pro Max Blue">
+                  <div class="product-info">
+                      <h4>iPhone 13 Pro Max (Blue)</h4>
+                      <p class="price">$599</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+              <div class="product-card glass-card">
+                  <img src="./images/iPhone 12 Pro  512gb.jpg" alt="iPhone 12 Pro">
+                  <div class="product-info">
+                      <h4>iPhone 12 Pro</h4>
+                      <p class="price">$450</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+              <div class="product-card glass-card">
+                  <img src="./images/11 pro.jpg" alt="iPhone 11 Pro">
+                  <div class="product-info">
+                      <h4>iPhone 11 Pro</h4>
+                      <p class="price">$350</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+              <div class="product-card glass-card">
+                  <img src="./images/11.1.jpg" alt="iPhone 11">
+                  <div class="product-info">
+                      <h4>iPhone 11 Base</h4>
+                      <p class="price">$299</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+              <div class="product-card glass-card">
+                  <img src="./images/iPhone XR - 256GB - Blue - Grade A - The iOutlet.jpg" alt="iPhone XR">
+                  <div class="product-info">
+                      <h4>iPhone XR</h4>
+                      <p class="price">$250</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+              <div class="product-card glass-card">
+                  <img src="./images/iPhone 8 Plus 256GB (PRODUCT)Red Sprint.jpg" alt="iPhone 8 Plus Red">
+                  <div class="product-info">
+                      <h4>iPhone 8 Plus (Red)</h4>
+                      <p class="price">$199</p>
+                      <a href="#" class="add-cart-btn">Add to Cart</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>Wells Tech Store</h3>
+                <p>Delivering the ultimate Apple experience straight to you.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Warranty Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Wells Tech Store. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+      const searchInput = document.getElementById('productSearch');
+      const categories = document.querySelectorAll('.series-category');
+      const noResults = document.getElementById('noResultsMessage');
+
+      searchInput.addEventListener('input', function() {
+          const filter = this.value.toLowerCase();
+          let totalVisible = 0;
+          
+          categories.forEach(category => {
+              const cards = category.querySelectorAll('.product-card');
+              let hasVisibleCards = false;
+
+              cards.forEach(card => {
+                  const title = card.querySelector('.product-info h4').textContent.toLowerCase();
+                  if (title.includes(filter)) {
+                      card.style.display = 'flex';
+                      hasVisibleCards = true;
+                      totalVisible++;
+                  } else {
+                      card.style.display = 'none';
+                  }
+              });
+
+              category.style.display = hasVisibleCards ? 'block' : 'none';
+          });
+          
+          if (noResults) {
+              noResults.style.display = totalVisible === 0 ? 'block' : 'none';
+          }
+      });
+
+      const track = document.querySelector('.carousel-track');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+
+      if (track && prevBtn && nextBtn) {
+          const scrollAmount = 1000;
+
+          const scrollNext = () => {
+              if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
+                  track.scrollTo({ left: 0, behavior: 'smooth' });
+              } else {
+                  track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+              }
+          };
+
+          nextBtn.addEventListener('click', scrollNext);
+
+          prevBtn.addEventListener('click', () => {
+              if (track.scrollLeft <= 0) {
+                  track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+              } else {
+                  track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+              }
+          });
+
+          let autoScroll = setInterval(scrollNext, 2000);
+
+          track.addEventListener('mouseenter', () => clearInterval(autoScroll));
+          track.addEventListener('mouseleave', () => {
+              autoScroll = setInterval(scrollNext, 2000);
+          });
+      }
+    </script>
+  </body>
+</html>
