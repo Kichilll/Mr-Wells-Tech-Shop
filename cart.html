@@ -17,7 +17,7 @@
           <img src="./images/logo.png" width="120px" alt="Wells Tech Logo" />
         </div>
         <nav>
-          <ul>
+          <ul id="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="about.html">About</a></li>
@@ -30,6 +30,11 @@
               </a>
             </li>
           </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
       </div>
 
@@ -172,6 +177,24 @@
       window.addEventListener('DOMContentLoaded', () => {
         if (typeof renderCartItems === 'function') {
           renderCartItems();
+        }
+      });
+    </script>
+    <script>
+      // Hamburger Menu Toggle
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Close menu when clicking a link
+      navMenu.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
         }
       });
     </script>
